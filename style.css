@@ -3,7 +3,7 @@
     user-select: none;
 }
 
-body {
+html, body {
     background-image: linear-gradient(rgb(35, 187, 247), rgb(255, 111, 0));
     background-attachment: fixed;
 }
