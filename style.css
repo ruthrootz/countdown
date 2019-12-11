@@ -28,3 +28,25 @@ body {
     border: 3px solid black !important;
     border-radius: 10px;
 }
+
+@media screen and (max-width: 600px) {
+
+    .card {
+      background-color: rgba(255, 255, 255, 0);
+      border: none;
+      width: 100%;
+    }
+
+    .card-title, .card-text {
+        font-size: 1.5rem;
+        margin-top: 20%;
+        margin-bottom: 20%;
+    }
+
+    .fas {
+        font-size: 1.5rem;
+        margin: 3%;
+        padding: 1%;
+    }
+
+}
