@@ -16,10 +16,11 @@ body {
 
 .card-title, .card-text {
     margin: 3%;
+    font-size: 0.90rem;
 }
 
 .fas {
-    font-size: 1.5rem;
+    font-size: 2rem;
     margin: 3%;
     padding: 1%;
 }
