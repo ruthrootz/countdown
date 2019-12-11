@@ -1,0 +1,30 @@
+* {
+    box-sizing: border-box;
+    user-select: none;
+}
+
+body {
+    background-image: linear-gradient(rgb(35, 187, 247), rgb(255, 111, 0));
+    background-attachment: fixed;
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.5);
+    height: 40vh;
+    margin-top: 30%;
+}
+
+.card-title, .card-text {
+    margin: 5%;
+}
+
+.fas {
+    font-size: 2rem;
+    margin: 3%;
+    padding: 3%;
+}
+
+.border {
+    border: 3px solid black !important;
+    border-radius: 10px;
+}
