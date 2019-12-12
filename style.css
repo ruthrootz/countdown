@@ -19,7 +19,7 @@ body {
 .card {
     background-color: rgba(255, 255, 255, 0.5);
     height: 60vh;
-    margin-top: 20%;
+    margin-top: 15%;
 }
 
 .card-title, .card-text {
