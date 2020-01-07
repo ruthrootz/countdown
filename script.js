@@ -4,7 +4,7 @@ $(() => {
 
     const ONE_DAY = 1000 * 60 * 60 * 24;
     let DURATION = 7;
-    let AWAITED_DATE = new Date(2019, 11, 31);
+    let AWAITED_DATE = new Date(2020, 7, 30);
 
     let now;
     let daysLeft;
@@ -26,7 +26,6 @@ $(() => {
             hoursLeft = Math.floor(miliseconds / ONE_DAY * 24) % 24;
             minutesLeft = Math.floor((AWAITED_DATE.getTime() - now.getTime()) / ONE_DAY * 24 * 60) % 60;
             secondsLeft = Math.floor((AWAITED_DATE.getTime() - now.getTime()) / ONE_DAY * 24 * 60 * 60) % 60;
-            timeLeftHTML.innerHTML = `${daysLeft}:${hoursLeft.toString().padStart(2, '0')}:${minutesLeft.toString().padStart(2, '0')}:${secondsLeft.toString().padStart(2, '0')}`;
             if (daysLeft >= 60) {
                 document.getElementById('sad').classList.add('border');
                 document.getElementById('meh').classList.remove('border');
@@ -46,18 +45,25 @@ $(() => {
                 document.getElementById('beaming').classList.remove('border');
                 document.getElementById('crying').classList.remove('border');
             } else if (daysLeft <= 0 && daysLeft >= -DURATION) {
+                hoursLeft *= -1;
+                minutesLeft *= -1;
+                secondsLeft *= -1;
                 document.getElementById('sad').classList.remove('border');
                 document.getElementById('meh').classList.remove('border');
                 document.getElementById('happy').classList.remove('border');
                 document.getElementById('beaming').classList.add('border');
                 document.getElementById('crying').classList.remove('border');
             } else {
+                hoursLeft *= -1;
+                minutesLeft *= -1;
+                secondsLeft *= -1;
                 document.getElementById('sad').classList.remove('border');
                 document.getElementById('meh').classList.remove('border');
                 document.getElementById('happy').classList.remove('border');
                 document.getElementById('beaming').classList.remove('border');
                 document.getElementById('crying').classList.add('border');
             }
+            timeLeftHTML.innerHTML = `${daysLeft}:${hoursLeft.toString().padStart(2, '0')}:${minutesLeft.toString().padStart(2, '0')}:${secondsLeft.toString().padStart(2, '0')}`;
             timeout();
         }, 1000);
     }
