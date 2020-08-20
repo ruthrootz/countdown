@@ -3,7 +3,7 @@
 $(() => {
 
     const ONE_DAY = 1000 * 60 * 60 * 24;
-    let DURATION = 7;
+    let DURATION = 11;
     let AWAITED_DATE = new Date(2020, 7, 21);
 
     let now;
@@ -38,13 +38,13 @@ $(() => {
                 document.getElementById('happy').classList.remove('border');
                 document.getElementById('beaming').classList.remove('border');
                 document.getElementById('crying').classList.remove('border');
-            } else if (daysLeft < 30 && daysLeft > 0) {
+            } else if (daysLeft < 30 && (daysLeft > 0 || hoursLeft > 0 || minutesLeft > 0 || secondsLeft > 0)) {
                 document.getElementById('sad').classList.remove('border');
                 document.getElementById('meh').classList.remove('border');
                 document.getElementById('happy').classList.add('border');
                 document.getElementById('beaming').classList.remove('border');
                 document.getElementById('crying').classList.remove('border');
-            } else if (daysLeft <= 0 && daysLeft >= -DURATION) {
+            } else if (daysLeft < 0 && hoursLeft < 0 && minutesLeft < 0 && secondsLeft < 0 && daysLeft >= -DURATION) {
                 hoursLeft *= -1;
                 minutesLeft *= -1;
                 secondsLeft *= -1;
