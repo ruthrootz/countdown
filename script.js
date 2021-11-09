@@ -4,7 +4,7 @@ $(() => {
 
     const ONE_DAY = 1000 * 60 * 60 * 24;
     let DURATION = 7;
-    let AWAITED_DATE = new Date(2021, 9, 6);
+    let AWAITED_DATE = new Date(2021, 10, 18);
 
     let now;
     let daysLeft;
