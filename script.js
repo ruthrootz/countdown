@@ -3,7 +3,7 @@
 $(() => {
 
     const ONE_DAY = 1000 * 60 * 60 * 24;
-    const DURATION = 5;
+    const DURATION = 11;
     const AWAITED_DATE = new Date(2023, 0, 12); // year, month index (month - 1), day
 
     let now;
